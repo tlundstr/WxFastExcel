@@ -96,6 +96,10 @@ public final class data
 					if(currentRowNo >= rowStart && (rowEnd == -1 || currentRowNo < rowEnd)){
 						DocList.add(getRowAsIData(lrow,colStart,colEnd, datePattern,headerMap ));
 					}
+					if(rowEnd != -1 && currentRowNo > rowEnd){
+						break;
+					}
+					
 				}
 				currentRowNo++;
 			}
